@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>100 Reasons</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:ital@0;1&family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= SCREEN 1 — ENVELOPE ================= -->
+  <section id="envelope-screen" class="screen">
+    <div class="paper-texture"></div>
+
+    <!-- lily corners -->
+    <svg class="lily-corner lily-corner--tl" viewBox="0 0 220 220" aria-hidden="true"><use href="#lily-sprig"/></svg>
+    <svg class="lily-corner lily-corner--br" viewBox="0 0 220 220" aria-hidden="true"><use href="#lily-sprig"/></svg>
+
+    <div class="envelope-wrap">
+      <p class="eyebrow">a letter for</p>
+      <h1 class="to-name" id="to-name-display">KEISHA</h1>
+
+      <div class="envelope" id="envelope">
+        <div class="envelope__back"></div>
+        <div class="envelope__letter-peek"></div>
+        <div class="envelope__flap"></div>
+        <div class="envelope__shadow-fold envelope__shadow-fold--left"></div>
+        <div class="envelope__shadow-fold envelope__shadow-fold--right"></div>
+
+        <button class="seal" id="seal-btn" aria-label="Open the letter">
+          <svg viewBox="0 0 100 100" class="seal__ring" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" />
+          </svg>
+          <span class="seal__label">Open<br/>This</span>
+        </button>
+      </div>
+
+      <p class="instruction">press the seal</p>
+    </div>
+  </section>
+
+  <!-- ================= SCREEN 2 — SCRAPBOOK ================= -->
+  <section id="reasons-screen" class="screen screen--hidden">
+    <div class="paper-texture"></div>
+    <div class="lily-border-left" aria-hidden="true"></div>
+    <div class="lily-border-right" aria-hidden="true"></div>
+
+    <button class="back-btn" id="back-btn">‹ back to the envelope</button>
+
+    <header class="reasons-header">
+      <p class="eyebrow">isang daang rason kung bakit kita mahal,</p>
+      <h1 class="reasons-title" id="reasons-to-name">You</h1>
+      <div class="ink-divider">
+        <svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,10 C40,2 60,18 100,10 C140,2 160,18 200,10" />
+        </svg>
+      </div>
+      <p class="reasons-sub">inihanda ni <span id="reasons-from-name">Darren</span>, good morning!</p>
+    </header>
+
+    <!-- SONG -->
+    <section class="song-card" id="song-card" aria-label="our song">
+      <button class="song-card__play" id="song-play-btn" aria-label="Play our song">
+        <svg class="song-card__icon" id="song-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path id="song-icon-path" d="M8 5v14l11-7z"/>
+        </svg>
+      </button>
+      <div class="song-card__info">
+        <p class="song-card__label">Ako si Darren, nagsasabing ako'y</p>
+        <p class="song-card__title" id="song-title">Song Title</p>
+        <p class="song-card__artist" id="song-artist">Artist</p>
+      </div>
+      <div class="song-card__bars" id="song-bars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <audio id="song-audio" preload="none"></audio>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="gallery-section">
+      <p class="section-eyebrow">a few of my favorites</p>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <div class="ink-divider ink-divider--wide">
+      <svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,10 C40,2 60,18 100,10 C140,2 160,18 200,10" />
+      </svg>
+    </div>
+
+    <main id="reasons-list" class="reasons-list"></main>
+
+    <footer class="reasons-footer">
+      <div class="ink-divider">
+        <svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,10 C40,2 60,18 100,10 C140,2 160,18 200,10" />
+        </svg>
+      </div>
+      <p class="footer-line">bukas at sa mga susunod na araw.</p>
+      <p class="signature">nagmamahal, <span id="footer-from-name">Darren</span></p>
+    </footer>
+  </section>
+
+  <!-- reusable lily artwork -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="lily-sprig">
+        <path class="lily-stem" d="M110 210 C105 150 95 120 60 90" fill="none"/>
+        <path class="lily-leaf" d="M85 150 C60 145 45 130 40 110 C65 112 82 125 85 150 Z"/>
+        <path class="lily-leaf" d="M95 175 C70 178 52 168 44 150 C70 148 90 155 95 175 Z"/>
+        <g class="lily-flower" transform="translate(48 78)">
+          <path d="M0 0 C-14 -6 -22 -20 -18 -34 C-6 -30 2 -16 0 0 Z"/>
+          <path d="M0 0 C10 -10 24 -12 34 -3 C22 6 8 8 0 0 Z"/>
+          <path d="M0 0 C-6 12 -18 20 -32 18 C-24 6 -12 -2 0 0 Z"/>
+          <path d="M0 0 C4 14 -2 28 -14 34 C-18 20 -12 8 0 0 Z"/>
+          <path d="M0 0 C16 4 26 16 24 30 C10 26 2 14 0 0 Z"/>
+          <circle class="lily-center" cx="0" cy="0" r="4"/>
+        </g>
+      </g>
+    </defs>
+  </svg>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
